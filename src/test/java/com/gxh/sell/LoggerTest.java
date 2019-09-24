@@ -18,5 +18,6 @@ public class LoggerTest {
       log.debug("debug");
       log.info("name: {},password: {}",name,password);
       log.error("error");
+      log.error("error1");
     }
 }
