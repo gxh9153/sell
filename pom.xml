@@ -47,6 +47,11 @@
             <version>1.18.8</version>
             <scope>provided</scope>
         </dependency>
+        <!--json格式转换-->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
