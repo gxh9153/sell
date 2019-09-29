@@ -28,7 +28,7 @@ public class OrderForm2OrderDTOConverter {
             orderDetailList = gson.fromJson(orderForm.getItems(),
                     new TypeToken<List<OrderDetail>>() {
                     }.getType());
-        }catch(Exception e){
+        }catch(Exception e){ 
             throw new SellException(ResultEnums.PARAM_ERROR);
         }
         orderDTO.setOrderDetailList(orderDetailList);
