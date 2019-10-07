@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 
 /**
@@ -33,6 +35,20 @@ public class BuyerProductController {
 
     @GetMapping("/list")
     public ResultVO list() {
+
+
+        //测试高并发 创建一个新线程
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                productInfoService.findUpAll();
+            }
+        };
+        //创建一个固定个数的线程池
+        ExecutorService executorService = Executors.newFixedThreadPool(25);
+        for (int i = 0; i < 1000; i++) {
+            executorService.submit(runnable);
+        }
 
         //1查询所有上架商品
         List<ProductInfo> productInfoList = productInfoService.findUpAll();
