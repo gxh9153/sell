@@ -11,6 +11,13 @@ spring:
     default-property-inclusion: non_null
 server:
   context-path: /sell
+wechat:
+  mpAppId: wxcdf4df9774db6673
+  mpSecret: a0da7779a6c19aecf52bd8aeb5dd7d94
+  mchId: 1558518411
+  mchKey: HJHDIUHWhjhkhiuyfgiuhru82yr978fd
+  keyPath: C:/Users/gxh/Documents/WeChat Files/gxh9153/FileStorage/File/2019-10/1558518411_20191010_cert/apiclient_cert.p12
+  notifyUrl: http://sell13.natapp1.cc/sell/pay/notify
 #logging:
 #  pattern:
 #    console: "%d - %msg%n"

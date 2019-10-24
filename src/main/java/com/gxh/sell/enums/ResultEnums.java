@@ -16,6 +16,7 @@ public enum ResultEnums {
     CART_EMPTY(18,"购物车为空"),
     OPENID_EMPTY(19,"微信openid为空"),
     ORDER_OWNER_ERROR(20,"该订单不属于当前用户"),
+    WX_MP_ERROR(21,"微信公众号方面错误"),
     ;
     private Integer code;
     private String message;
